@@ -1,0 +1,118 @@
+<!-- <form #userForm="ngForm"(ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" 
+        name="name" [(ngModel)]="userModel.name">
+       
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="userModel.email">
+    </div>
+
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" class="form-control" name="phone" [(ngModel)]="userModel.phone">
+    </div>
+
+    <div class="form-group">
+        <label>Message</label>
+        <textarea rows="3" name="desc" placeholder="Enter your message..." class="form-control" style="width:100%;" [(ngModel)]="userModel.desc"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form> -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="text-center mt-0">Contact Us</h2>
+        <hr class="divider my-4" />
+        <h1 class="text-center mt-0">Let’s Talk About Your Project</h1>
+        <h1 class="text-center mt-0">Tell us more about your project and we will lead the consultation with you.</h1>
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="info-box">
+                            <i class="material-icons">location_on</i>
+                            <h3>Our Address</h3>
+                            <p>524, Dasrath Chand Marga, Baluwatar, Kathmandu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="material-icons">email</i>
+                            <h3>Email Us</h3>
+                            <p>info@facelift.com.np</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-box mt-4">
+                            <i class="material-icons">call</i>
+                            <h3>Call Us</h3>
+                            <p>(+977)-1-4427825</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <form #userForm="ngForm"(ngSubmit)="onSubmit(); userForm.reset()">
+                    <!-- <div class="form-group">
+                        <label for="name">Name</label>
+                        <input required [(ngModel)]="userModel.name" name="name" id="name" #name="ngModel" type="text"
+                            class="form-control" />
+                        <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+                            <div *ngIf="name.errors.required">Name is required.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input required [(ngModel)]="userModel.email" name="email" id="email" #email="ngModel" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            class="form-control" />
+                        <div *ngIf="email.touched">
+                            <div class="alert alert-danger" *ngIf="email.errors?.required">Email is required.</div>
+                            <div class="alert alert-danger" *ngIf="email.errors?.pattern">This is not a valid email.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input required [(ngModel)]="userModel.phone" name="phone" id="phone" #phone="ngModel" type="tel" pattern="^[2-9]{1}[0-9]{9}$" maxlength="10"
+                            class="form-control" />
+                        <div *ngIf="phone.touched">
+                            <div class="alert alert-danger" *ngIf="phone.errors?.required">Phone number is required.</div>
+                            <div class="alert alert-danger" *ngIf="phone.errors?.pattern">This is not a valid phone number.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desc">Message</label>
+                        <textarea name="desc" rows="4" cols="50" [(ngModel)]="userModel.desc" class="form-control" placeholder="Type your message..."></textarea>
+                    </div> -->
+
+                    <re-captcha  name="captcha" required></re-captcha>
+                    
+                    <!-- <button class="btn btn-primary" [disabled]="!userForm.valid">Submit</button> -->
+                    <button class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+
+                    <p class="alert alert-success" *ngIf="showMsgSuccess">
+                        <strong>Sent!</strong> Thank you for getting in touch!.
+                    </p>
+
+                    <p class="alert alert-danger" *ngIf="showMsgFail">
+                        <strong>Error!</strong> Please try reaching us via our phone/email!.
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section><!-- End Contact Section -->
